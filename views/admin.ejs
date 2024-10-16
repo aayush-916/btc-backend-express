@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Bookings</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Address</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% bookings.forEach(function(booking) { %>
+                <tr>
+                    <td><%= booking.id %></td>
+                    <td><%= booking.name %></td>
+                    <td><%= booking.number %></td>
+                    <td><%= booking.address %></td>
+                    <td><%= booking.date %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+<script>
+    function remove(id){
+        console.log("id = ",id);
+        alert(id);
+    }
+</script>
+</html>
